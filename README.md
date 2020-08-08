@@ -1,6 +1,7 @@
 # Prismatic
 
-[Ghost](http://ghost.org/) Theme for prismaticpath.com, based on TryGhost/Lyra and TryGhost/London, but with additional animations and styling changes.
+[Ghost](http://ghost.org/) Theme for prismaticpath.com, based on TryGhost/Lyra and TryGhost/London, but with additional animations and styling changes
+(from [Reedyn/Saga](https://github.com/Reedyn/Saga)).
 
 A custom, image-centric theme for [Ghost](http://github.com/tryghost/ghost/). Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
 

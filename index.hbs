@@ -6,8 +6,8 @@ into the {body} of the default.hbs template --}}
         {{#if @site.cover_image}}
                 <section class="hero">
             <div class="hero-content">
-                <canvas id="logo" width="800" height="200"></canvas>
-                <h2 class="site-description animated fadeInUp delay-2"><span class="description">{{@site.description}}</span></h2>
+                <canvas id="logo" width="400" height="100"></canvas>
+                <h1 class="site-description animated fadeInUp delay-2"><span class="description">{{@site.description}}</span></h1>
             </div>
         </section>
             {{/if}}
@@ -77,7 +77,7 @@ into the {body} of the default.hbs template --}}
 
         leon = new LeonSans({
             text: 'PrismaticPath',
-            size: getSize(200),
+            size: getSize(120),
             weight: 500,
             pathGap: -1,
             isPath: true
@@ -118,7 +118,7 @@ into the {body} of the default.hbs template --}}
     function animate(t) {
         requestAnimationFrame(animate);
 
-        const x = (sw - leon.rect.w) / 2;
+        const x = 0; // (sw - leon.rect.w) / 2;
         const y = (sh - leon.rect.h) / 2;
         leon.position(x + moveX, y + moveY);
 
