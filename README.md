@@ -1,4 +1,6 @@
-# London
+# Prismatic
+
+[Ghost](http://ghost.org/) Theme for prismaticpath.com, based on TryGhost/Lyra and TryGhost/London, but with additional animations and styling changes.
 
 A custom, image-centric theme for [Ghost](http://github.com/tryghost/ghost/). Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
 
@@ -10,6 +12,16 @@ A custom, image-centric theme for [Ghost](http://github.com/tryghost/ghost/). Ma
 
 
 &nbsp;
+
+# Instructions
+
+1. [Download this theme](https://github.com/ChristineTham/prismatic-ghost-theme/archive/master.zip)
+2. Log into Ghost, and go to the `Design` settings area to upload the zip file
+3. Unzip the theme archive on your computer and locate the file called `routes.yaml`
+4. Inside Ghost admin, go to the `Labs` settings area and scroll down until you see the `Custom Routes` section
+5. Upload the `routes.yaml` from this theme
+
+That's it! You now have a Ghost publication which supports free and paid memberships. If you need help, check out the <a href="https://ghost.org/docs/members/">Ghost members documentation</a> or chat with other Ghost users on <a href="https://forum.ghost.org">Ghost forum</a>.
 
 # First time using a Ghost theme?
 
@@ -35,10 +47,13 @@ One neat trick is that you can also create custom one-off templates just by addi
 
 # Development
 
-London styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
-$ yarn install
+# Install
+yarn
+
+# Run build & watch for changes
 $ yarn dev
 ```
 
@@ -47,7 +62,7 @@ Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
 ```bash
-$ yarn zip
+yarn zip
 ```
 
 # PostCSS Features Used
@@ -59,4 +74,4 @@ $ yarn zip
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2020 Hello Tham - Released under the [MIT license](LICENSE).
