@@ -106,7 +106,3 @@ html.is-animating .transition-fade {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
 }
-
-.hidden {
-    display: none;
-}
