@@ -1,11 +1,15 @@
 # Prismatic
 
-[Ghost](http://ghost.org/) Theme for prismaticpath.com, based on TryGhost/Lyra and TryGhost/London, but with additional animations and styling changes
-(from [Reedyn/Saga](https://github.com/Reedyn/Saga)).
+[Ghost](http://ghost.org/) Theme for prismaticpath.com, based on [London](https://github.com/TryGhost/London),
+but with additional animations and styling changes from [Saga](https://github.com/Reedyn/Saga).
 
-A custom, image-centric theme for [Ghost](http://github.com/tryghost/ghost/). Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
+The animated site title (hardcoded to "Prismatic Path" for now but you can easily change by editing index.hbs) is based on an example from
+[leonsans](https://github.com/cmiscm/leonsans).
 
-**Demo: https://london.ghost.io**
+This theme is made specially for the [Prismatic Path](https://prismaticpath.com) web site.
+Completely free and fully responsive, released under the MIT license.
+
+**Demo: https://prismaticpath.com**
 
 &nbsp;
 
@@ -75,4 +79,4 @@ yarn zip
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Hello Tham - Released under the [MIT license](LICENSE).
+Copyright (c) 2020 Hello Tham - Released under the [MIT license](LICENSE).
