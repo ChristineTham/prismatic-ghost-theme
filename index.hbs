@@ -14,11 +14,13 @@ into the {body} of the default.hbs template --}}
     </header>
 {{/is}}
 
-<script src="{{asset "built/leon.js"}}"></script>
-<script>
+<script src="{{asset "built/leon.js"}}" data-swup-ignore-script></script>
+<script data-swup-ignore-script>
     const speed = 5;
     const fps = 5000 / 30;
     const patternWidth = 30;
+    const defaultSize = 150;
+    const defaultText = "Prismatic Path";
     const PI2 = 2 * Math.PI;
     let cValue = 0, mode;
     let leon, time;
@@ -41,15 +43,20 @@ into the {body} of the default.hbs template --}}
     }
 
     function canvasResize() {
-        sw = canvas.clientWidth;
-        sh = canvas.clientHeight;
+        sw = document.body.clientWidth * .9;
+        sh = document.body.clientHeight * .2;
+
+        if (sh > defaultSize) sh = defaultSize;
 
         canvas.width = sw * pixelRatio;
         canvas.height = sh * pixelRatio;
         canvas.style.width = sw + 'px';
         canvas.style.height = sh + 'px';
         ctx.scale(pixelRatio, pixelRatio);
-        console.log(canvas);
+        leon.size = defaultSize;
+        if (leon.size > sw / 7) leon.size = sw / 7;
+        if (leon.size > sh) leon.size = sh;
+        // console.log(leon.size, sw, sh);
     }
 
     function moveEvent(canvas) {
@@ -65,23 +72,16 @@ into the {body} of the default.hbs template --}}
         });
     }
 
-    function getSize(size) {
-        let ratio = Math.sqrt(sw * sw + sh * sh) / 1800;
-        if (ratio > 1) ratio = 1;
-        else if (ratio < 0.5) ratio = 0.5;
-        return size * ratio;
-    }
-
     function init() {
-        generateCanvas();
-
         leon = new LeonSans({
-            text: 'PrismaticPath',
-            size: getSize(120),
+            text: defaultText,
+            size: defaultSize,
             weight: 500,
             pathGap: -1,
             isPath: true
         });
+
+        generateCanvas();
 
         requestAnimationFrame(animate);
     }
@@ -134,6 +134,10 @@ into the {body} of the default.hbs template --}}
     window.onload = () => {
         init();
     };
+
+    document.addEventListener('swup:contentReplaced', event => {
+        init();
+    });
 </script>
 
 <div class="post-feed animated fadeIn{{#if @site.cover_image}} delay-3{{/if}}{{#unless @site.cover_image}} delay-1{{/unless}}">
